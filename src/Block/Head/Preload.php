@@ -23,7 +23,13 @@ class Preload extends \Magento\Framework\View\Element\AbstractBlock
      */
     protected function _toHtml() {
         $html = '';
-        foreach ($this->getAssets() as $asset) {
+        $assets = $this->getAssets();
+
+        if (empty($assets)) {
+            return;
+        }
+
+        foreach ($assets as $asset) {
             $attributesHtml = sprintf('%s="%s"', $asset['attributes']['name'], $asset['attributes']['value']);
             $assetUrl = $this->_assetRepo->getUrl($asset['path']);
             $html .= sprintf($this->_template, $assetUrl, $attributesHtml);
