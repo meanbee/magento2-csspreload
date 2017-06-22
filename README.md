@@ -5,8 +5,7 @@ Simple module that allows for asynchronous CSS loading in Magento 2
 ## Installation
 
 1. Go to your Magento root directory
-2. Run ```composer config repositories.css-preload vcs git@github.com:meanbee/magento2-csspreload.git```
-3. Run ```composer require meanbee/magento2-csspreload @dev```
+2. Run ```composer require meanbee/magento2-csspreload```
 
 ## Development
 
