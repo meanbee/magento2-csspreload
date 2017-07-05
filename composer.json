@@ -14,7 +14,8 @@
   },
   "require": {
     "magento/framework": "100.1.*",
-    "psr/log": "~1.0"
+    "psr/log": "~1.0",
+    "php": ">=5.6.0"
   },
   "authors": [
     {
