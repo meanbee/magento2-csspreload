@@ -8,7 +8,7 @@ class Preload extends \Magento\Framework\View\Element\AbstractBlock
 
     public function __construct(
         \Magento\Framework\View\Element\Context $context,
-        string $template,
+        $template,
         array $data = []
     ) {
         parent::__construct($context, $data);
