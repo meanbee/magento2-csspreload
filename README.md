@@ -14,9 +14,7 @@ Simple module that allows for asynchronous CSS loading in Magento 2
 A Docker development environment is included with the project:
 
 ```
-mkdir magento
-docker-compose up -d db # Allow a few seconds for the db to initalise
-docker-compose run --rm cli bash /src/setup.sh
+docker-compose run --rm cli magento-extension-installer Meanbee_CSSPreload
 docker-compose up -d
 ```
 
