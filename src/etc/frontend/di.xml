@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Meanbee\CSSPreload\Block\Head\Preload">
-        <arguments>
-            <argument name="template" xsi:type="string"><![CDATA[<link rel="preload" as="style" href="%s" onload="this.rel='stylesheet'" %s />]]></argument>
-        </arguments>
-    </type>
-</config>

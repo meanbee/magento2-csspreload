@@ -20,19 +20,33 @@ docker-compose up -d
 
 
 ## Usage
+
+To add assets to the block, provide the `assets` argument:
+
 ```
 <referenceBlock name="head.csspreload">
     <arguments>
         <argument name="assets" xsi:type="array">
             <item name="unique_name" xsi:type="array">
                 <item name="path" xsi:type="string">css/filename.css</item>
-                    <item name="attributes" xsi:type="array">
-                        <item name="name" xsi:type="string">attribute</item>
-                        <item name="value" xsi:type="string">value</item>
-                    </item>
+                <item name="attributes" xsi:type="array">
+                    <item name="name" xsi:type="string">attribute</item>
+                    <item name="value" xsi:type="string">value</item>
                 </item>
             </item>
         </argument>
     </arguments>
 </referenceBlock>
 ```
+
+To modify the template of the generated `<link />` tags, provide a `link_template` argument, e.g.:
+
+```
+<referenceBlock name="head.csspreload">
+    <arguments>
+        <argument name="link_template" xsi:type="string"><![CDATA[<link rel="preload" as="style" href=":path:" onload="this.rel='stylesheet'" :attributes: />]]></argument>
+    </arguments>
+</referenceBlock>
+```
+
+There are two variables that will be substituted: `:path:`, which will be replaced by the asset path, and `:attributes:` that will contain your `attributes` of your `assets` as HTML attributes.

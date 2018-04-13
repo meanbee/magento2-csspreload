@@ -2,7 +2,11 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="head.additional">
-            <block class="Meanbee\CSSPreload\Block\Head\Preload" name="head.csspreload" />
+            <block class="Meanbee\CSSPreload\Block\Head\Preload" name="head.csspreload">
+                <arguments>
+                    <argument name="link_template" xsi:type="string"><![CDATA[<link rel="preload" as="style" href=":path:" onload="this.rel='stylesheet'" :attributes: />]]></argument>
+                </arguments>
+            </block>
         </referenceBlock>
     </body>
 </page>
