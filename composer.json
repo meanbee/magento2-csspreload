@@ -4,7 +4,7 @@
   "type": "magento2-module",
   "version": "1.1.0",
   "license": [
-    "Commercial"
+    "MIT"
   ],
   "repositories": {
     "magento": {
