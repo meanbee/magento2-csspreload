@@ -2,7 +2,7 @@
   "name": "meanbee/magento2-csspreload",
   "description": "Magento 2 module that allows loading of stylesheets with the preload attribute",
   "type": "magento2-module",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "license": [
     "MIT"
   ],
